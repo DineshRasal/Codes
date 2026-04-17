@@ -1,22 +1,35 @@
 package CommonQ;
 
+import java.util.Scanner;
+
 public class PrimeNoGivenRange {
      public static void main(String[] args) {
-        int no1=5;
-        int no2=29;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter Number ");
+      int num=sc.nextInt();
+
+      if(num==2){
+        System.out.println("Number Is Prime");
+
+      }else{
+        boolean isPrime=true;
+        for(int i=2;i<Math.sqrt(num);i++){
+            
+            if(num%i==0){
+                isPrime=false;
+            }
+            
+        }
+          if( isPrime==true){
+            System.out.println("Number is Prime");
+        }else{
+            System.out.println("Number Is Not Prime");
+        }
+      
+      }
 
         
 
-        boolean isPrime=true;
-        for(int i=no1;i<=no2;i++){
-            if(no1%i==0){
-                isPrime=false;
-                break;
-            }
-            else{
-                System.out.println(no1);
-            }
-        }
 
 
     }
